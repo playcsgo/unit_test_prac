@@ -19,7 +19,7 @@ jobs:
     # 設定策略 以便在不同的配置下運行任務
     strategy:
       matrix:
-        node-version: [12, 14, 16]
+        node-version: [21, 22]
 
     # 步驟
     steps:
