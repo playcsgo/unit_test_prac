@@ -25,5 +25,10 @@
     "reporter-option": [
       "mochaFile=./test-results.xml"
     ]
+  },
+  "nyc": {
+    "reporter": ["text", "lcov"],
+    "all": true,
+    "include": ["src/**/*.js"]
   }
 }

@@ -7,3 +7,92 @@
 測試日程：制定測試計劃，包括測試的時間安排和里程碑。
 風險管理：識別和管理測試過程中的風險，例如時間不足、資源有限等。
 測試報告：定義測試報告的內容和頻率，包括測試結果、覆蓋率報告、缺陷報告等。
+
+
+驗收測試：
+測試系統是否滿足業務需求。
+使用工具：Cucumber、RSpec。
+目標：確保系統符合業務需求和預期。
+
+
+避免重複代碼:
+使用設置（setup）和拆卸（teardown）方法來避免在多個測試用例中重複相同的代碼
+
+
+遵循紅綠重構循環:
+紅：編寫一個失敗的測試。
+綠：編寫最少量的代碼以使測試通過。
+重構：在測試通過的前提下，重構代碼以提高其質量和可讀性
+
+
+使用覆蓋率工具:
+使用如Istanbul（nyc）這樣的覆蓋率工具來測量和報告測試覆蓋率，並確保你的測試覆蓋了所有重要的代碼路徑。
+
+設置適當的超時:
+為異步測試設置適當的超時，避免因為異步操作無限期等待而導致測試掛起。
+
+
+兩者衝突解法
+兩者衝突的原因在於，ESLint 同時帶有「品質」與「風格」兩種控管工作，但「風格」的部分又跟 Prettier 不相容，會導致兩者同時開啟時，可能會「一個叫你改，一個叫你不要改」。
+
+
+Prettier: 幫你排版
+
+這時可以借助兩個工具：
+eslint-config-prettier：關閉 ESLint 中，與 Prettier 衝突的規則
+eslint-plugin-prettier：賦予 ESLint 用 Prettier 來排版調整的能力
+
+安裝 Mocha 插件
+npm install --save-dev mocha mocha-junit-reporter
+
+配置 Mocha 插件
+"mocha": {
+  "reporter": "mocha-junit-reporter",
+  "reporter-option": [
+    "mochaFile=./test-results.xml"
+  ]
+}
+
+
+
+安裝 Chai 插件
+npm install --save-dev chai chai-as-promised
+
+使用 Chai 插件
+在測試文件中導入並使用插件：
+
+```
+const chai = require('chai');
+const chaiAsPromised = require('chai-as-promised');
+
+chai.use(chaiAsPromised);
+const expect = chai.expect;
+
+describe('Async function', () => {
+  it('should fulfill promise', () => {
+    return expect(Promise.resolve('value')).to.eventually.equal('value');
+  });
+});
+```
+
+
+配置 Travis CI
+
+
+1.4
+
+CI/CD 工具
+常見的 CI/CD 工具包括：
+
+Jenkins：開源自動化服務器，支持自定義和擴展。
+GitHub Actions：GitHub 提供的內置 CI/CD 工具，集成方便。
+Travis CI：專為開源項目設計的 CI/CD 平台。
+CircleCI：快速且易於配置的 CI/CD 平台。
+GitLab CI/CD：GitLab 提供的內置 CI/CD 工具，支持自託管。
+
+
+1.5 測試性能與優化
+ 減少測試執行時間
+並行測試執行   mocha --parallel test/
+
+實時測試監視   mocha --watch test/

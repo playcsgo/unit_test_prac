@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.029" tests="8" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-05-24T07:39:18" tests="0" time="0.000" failures="0">
+<testsuites name="Mocha Tests" time="0.028" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-05-24T12:39:56" tests="0" time="0.000" failures="0">
   </testsuite>
-  <testsuite name="abs function" timestamp="2024-05-24T07:39:18" tests="3" file="F:\AC\unit-test\test\abs.test.js" time="0.002" failures="0">
-    <testcase name="abs function should return 1 for input -1" time="0.000" classname="should return 1 for input -1">
+  <testsuite name="abs function" timestamp="2024-05-24T12:39:56" tests="3" file="F:\AC\unit-test\test\abs.test.js" time="0.002" failures="0">
+    <testcase name="abs function should return 1 for input -1" time="0.001" classname="should return 1 for input -1">
     </testcase>
     <testcase name="abs function should return 0 for input 0" time="0.000" classname="should return 0 for input 0">
     </testcase>
     <testcase name="abs function should return 4 for input 4" time="0.000" classname="should return 4 for input 4">
     </testcase>
   </testsuite>
-  <testsuite name="GET /user" timestamp="2024-05-24T07:39:18" tests="1" file="F:\AC\unit-test\test\app.test.js" time="0.022" failures="0">
-    <testcase name="GET /user should return user details" time="0.021" classname="should return user details">
+  <testsuite name="GET /user" timestamp="2024-05-24T12:39:56" tests="1" file="F:\AC\unit-test\test\app.test.js" time="0.021" failures="0">
+    <testcase name="GET /user should return user details" time="0.020" classname="should return user details">
     </testcase>
   </testsuite>
-  <testsuite name="fechData function" timestamp="2024-05-24T07:39:18" tests="2" file="F:\AC\unit-test\test\fetchData.test.js" time="0.003" failures="0">
+  <testsuite name="fechData function" timestamp="2024-05-24T12:39:56" tests="2" file="F:\AC\unit-test\test\fetchData.test.js" time="0.003" failures="0">
     <testcase name="fechData function should fetchData from API" time="0.002" classname="should fetchData from API">
     </testcase>
     <testcase name="fechData function should handle error response" time="0.000" classname="should handle error response">
     </testcase>
   </testsuite>
-  <testsuite name="Sum Function" timestamp="2024-05-24T07:39:18" tests="2" file="F:\AC\unit-test\test\sum.test.js" time="0.001" failures="0">
+  <testsuite name="Sum Function" timestamp="2024-05-24T12:39:56" tests="2" file="F:\AC\unit-test\test\sum.test.js" time="0.001" failures="0">
     <testcase name="Sum Function should add 1 and 2 to return 3" time="0.000" classname="should add 1 and 2 to return 3">
     </testcase>
     <testcase name="Sum Function should add -1 and -2 to return -3" time="0.000" classname="should add -1 and -2 to return -3">

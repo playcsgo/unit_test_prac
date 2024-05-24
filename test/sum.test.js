@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-const sum = require('../sum')
+const sum = require('../src/sum')
 
 describe('Sum Function', () => {
   it('should add 1 and 2 to return 3', () => {

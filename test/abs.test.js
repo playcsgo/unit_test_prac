@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-const abs = require('../abs')
+const abs = require('../src/abs')
 
 describe('abs function', () => {
   it('should return 1 for input -1', () => {
